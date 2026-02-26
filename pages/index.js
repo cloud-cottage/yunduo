@@ -1,21 +1,21 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import Portfolio from '../components/Portfolio';
+import Stories from '../components/Stories';
 import Features from '../components/Features';
-import Testimonials from '../components/Testimonials';
-import ContactCta from '../components/ContactCta';
+import Donate from '../components/Donate';
+import Media from '../components/Media';
 import Footer from '../components/Footer';
 
 export default function Home() {
   return (
     <div>
       <Navbar />
-      <main>
+      <main style={{ padding: 0 }}>
         <Hero />
-        <Portfolio />
+        <Stories />
         <Features />
-        <Testimonials />
-        <ContactCta />
+        <Donate />
+        <Media />
       </main>
       <Footer />
     </div>

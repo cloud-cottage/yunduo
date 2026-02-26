@@ -3,69 +3,50 @@ import Footer from '../components/Footer';
 
 export default function About() {
   const team = [
-    { id: 1, name: '张宇', role: '创始人 & 设计总监', bio: '多年品牌与交互设计经验，擅长用视觉讲故事。' },
-    { id: 2, name: '刘晴', role: '前端技术负责人', bio: '专注 React 与性能优化，追求极致的用户体验。' },
-    { id: 3, name: '陈思', role: '产品策划', bio: '从需求到落地，负责项目规划与客户沟通。' },
+    { id: 1, name: '林溪', role: '创始人', bio: '"我从小镇来，知道那里的孩子有多渴望看见更大的世界。艺术让他们敢于想象，财商让他们能够实现。云朵计划——就是为这种\'敢于\'和\'能够\'，搭一座桥。"' },
+    { id: 2, name: '全职公益人', role: '12位', bio: '扎根一线，负责项目执行与运营' },
+    { id: 3, name: '常驻艺术家', role: '8位', bio: '带来专业的艺术课程与创作指导' },
+    { id: 4, name: '志愿讲师', role: '47位', bio: '财商教育认证讲师' },
   ];
 
   return (
     <div>
       <Navbar />
-      <main>
-        <section className="page-header" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <h1>关于 CloudPlan 云朵计划</h1>
-          <p className="text-secondary">我们以性能、可访问性与清晰的设计为核心，为你打造原创且现代的网页体验。</p>
+      <main style={{ paddingTop: '100px' }}>
+        <section style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '800px', margin: '0 auto 4rem' }}>
+          <h1>云朵的土壤</h1>
+          <p className="text-secondary" style={{ fontSize: '1.2rem' }}>谁在守护这片天空</p>
         </section>
 
-        <section className="mission" style={{ marginBottom: '4rem', padding: '2rem', background: 'var(--card-bg)', border: '1px solid var(--card-border)', borderRadius: '16px' }}>
-          <h2 style={{ marginBottom: '1rem' }}>使命与愿景</h2>
-          <p style={{ fontSize: '1.1rem', lineHeight: 1.7, color: 'var(--text-secondary)' }}>
-            让每个品牌都拥有兼具美感与功能的数字体验，通过设计与技术驱动业务增长。
-          </p>
+        <section style={{ marginBottom: '4rem', padding: '3rem', background: '#FFFFFF', borderRadius: '20px', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}>
+          <h2 style={{ marginBottom: '1.5rem', textAlign: 'center' }}>发起人语</h2>
+          <blockquote style={{ fontSize: '1.2rem', lineHeight: 1.8, color: '#4A5568', textAlign: 'center', fontStyle: 'italic', border: 'none' }}>
+            "我从小镇来，知道那里的孩子有多渴望看见更大的世界。<br/>
+            艺术让他们敢于想象，财商让他们能够实现。<br/>
+            云朵计划——就是为这种'敢于'和'能够'，搭一座桥。"
+          </blockquote>
+          <p style={{ textAlign: 'center', marginTop: '1.5rem', color: '#718096' }}>——创始人 林溪</p>
         </section>
 
-        <section className="team" style={{ marginBottom: '4rem' }}>
-          <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>团队</h2>
-          <div className="team-grid" style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-            gap: '2rem',
-          }}>
+        <section style={{ marginBottom: '4rem' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>团队构成</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
             {team.map(t => (
-              <div key={t.id} className="team-card" style={{
-                padding: '2rem',
-                background: 'var(--card-bg)',
-                border: '1px solid var(--card-border)',
-                borderRadius: '16px',
-                textAlign: 'center',
-              }}>
-                <div className="team-avatar" style={{
-                  width: '120px',
-                  height: '120px',
-                  borderRadius: '50%',
-                  background: 'linear-gradient(135deg, var(--primary), var(--accent))',
-                  margin: '0 auto 1rem',
-                }}></div>
-                <h3 style={{ margin: '0 0 0.25rem' }}>{t.name}</h3>
-                <p className="text-secondary" style={{ marginBottom: '1rem' }}>{t.role}</p>
-                <p style={{ margin: 0 }}>{t.bio}</p>
+              <div key={t.id} style={{ background: '#FFFFFF', borderRadius: '16px', padding: '2rem', textAlign: 'center', boxShadow: '0 4px 15px rgba(0,0,0,0.06)' }}>
+                <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', color: '#2D3748' }}>{t.name}</h3>
+                <p style={{ color: '#A7D2E8', fontWeight: 600, marginBottom: '0.5rem' }}>{t.role}</p>
+                <p style={{ color: '#718096', fontSize: '0.95rem', margin: 0 }}>{t.bio}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="values" className="feature-grid">
-          <div className="feature">
-            <h3>性能驱动</h3>
-            <p>代码分割、懒加载与缓存策略，让你的网站飞快。</p>
-          </div>
-          <div className="feature">
-            <h3>无障碍优先</h3>
-            <p>键盘导航、ARIA 与语义化标签，让所有人都能无障碍使用。</p>
-          </div>
-          <div className="feature">
-            <h3>清晰视觉</h3>
-            <p>统一的设计系统与品牌风格，确保视觉一致性。</p>
+        <section style={{ marginBottom: '4rem', textAlign: 'center' }}>
+          <h2 style={{ marginBottom: '2rem' }}>透明公示</h2>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+            <a href="#" style={{ padding: '12px 24px', background: '#A7D2E8', color: '#2D3748', borderRadius: '100px', fontWeight: 600 }}>2025年度工作报告</a>
+            <a href="#" style={{ padding: '12px 24px', background: '#FADADD', color: '#2D3748', borderRadius: '100px', fontWeight: 600 }}>2025财务审计报告</a>
+            <a href="#" style={{ padding: '12px 24px', border: '2px solid #A7D2E8', color: '#2D3748', borderRadius: '100px', fontWeight: 600 }}>合作伙伴名单</a>
           </div>
         </section>
       </main>
