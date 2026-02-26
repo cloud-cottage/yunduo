@@ -1,19 +1,22 @@
 export default function Features() {
   return (
-    <section className="features" aria-label="Features">
-      <h2>我们提供</h2>
+    <section className="features" aria-label="Programs">
+      <div className="section-header">
+        <h2>Our Programs</h2>
+        <p className="text-secondary">Engaging workshops that inspire creativity and build life skills</p>
+      </div>
       <div className="feature-grid">
         <div className="feature">
-          <h3>极速响应</h3>
-          <p>轻量架构与智能加载，确保跨设备流畅体验。</p>
+          <h3>Art Workshops</h3>
+          <p>Hands-on painting, music, and creative expression sessions that unlock imagination.</p>
         </div>
         <div className="feature">
-          <h3>精致排版与清晰 UI</h3>
-          <p>由设计师打造的视觉语言，让信息一目了然。</p>
+          <h3>Financial Literacy</h3>
+          <p>Fun budgeting games and money management lessons for young minds.</p>
         </div>
         <div className="feature">
-          <h3>对 SEO 友好的结构</h3>
-          <p>语义化 HTML 与静态生成助力搜索引擎收录。</p>
+          <h3>Mentorship</h3>
+          <p>Guided programs connecting children with artists and financial experts.</p>
         </div>
       </div>
     </section>
